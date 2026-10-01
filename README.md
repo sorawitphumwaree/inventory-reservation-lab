@@ -19,4 +19,4 @@ The server listens on `http://127.0.0.1:8080`. Stop it with Ctrl+C.
 curl.exe -i http://127.0.0.1:8080/health
 ```
 
-Expected response: `200 OK` with a body of `ok`.
+Expected response: `200 OK` with `Content-Type: application/json` and a body of `{"status":"ok"}`.
