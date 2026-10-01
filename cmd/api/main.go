@@ -1,14 +1,14 @@
 package main
 
 import (
-	"fmt"
+	"github.com/sorawitphumwaree/inventory-reservation-lab/internal/httpapi"
 	"log"
 	"net/http"
 )
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("GET /health", healthHandler)
+	mux.HandleFunc("GET /health", httpapi.HealthHandler)
 
 	log.Println("server listening on http://127.0.0.1:8080")
 
@@ -16,9 +16,4 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-}
-
-func healthHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-	fmt.Fprintln(w, "ok")
 }
