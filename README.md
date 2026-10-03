@@ -20,3 +20,9 @@ curl.exe -i http://127.0.0.1:8080/health
 ```
 
 Expected response: `200 OK` with `Content-Type: application/json` and a body of `{"status":"ok"}`.
+
+## Test
+
+```powershell
+go test ./...
+```
